@@ -48,7 +48,6 @@ export default {
         return this.$store.state.system.mainTabs;
       },
       set(val) {
-        console.log(val);
         this.$store.commit("system/updateMainTabs", val);
       },
     },
@@ -118,7 +117,6 @@ export default {
     },
   },
   created() {
-    console.log(this.mainTabs);
     this.routeChangeHandle(this.$route);
   },
 };

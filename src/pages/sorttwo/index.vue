@@ -59,7 +59,7 @@
 </template>
 <script>
 export default {
-  name: "yq-percentage",
+  name: "yq-sorttwo",
   data() {
     return {
       htmlData: `<c-percentage width='70%' :background='["#002adb", "#04f7fb"]' :haveBg='false' rem></c-percentage>`,

@@ -20,6 +20,52 @@ export const menuList = [
         name: 'percent',
         title: '进度条'
       },
+      {
+        type: 1,
+        name: 'master',
+        title: '遮罩层'
+      },
+      {
+        type: 1,
+        name: 'scroll',
+        title: '上下滚动'
+      },
+      {
+        type: 1,
+        name: 'autoscroll',
+        title: '自动滚动'
+      },
+      {
+        type: 1,
+        name: 'tableone',
+        title: '列表样式1'
+      },
+      {
+        type: 1,
+        name: 'numberone',
+        title: '数字样式1'
+      },
+      {
+        type: 1,
+        name: 'btnone',
+        title: '按钮样式1'
+      },
+      {
+        type: 1,
+        name: 'headerone',
+        title: '标题样式1'
+      },
+      {
+        type: 1,
+        name: 'sortone',
+        title: '排序样式1'
+      },
+      {
+        type: 1,
+        name: 'sorttwo',
+        title: '排序样式2'
+      },
+      
     ]
   }
 ];

@@ -3,7 +3,7 @@
   el-menu-item(v-if='!isDirectory', :index='menuIndex', @click='gotoRouteHandle(menu)')
     svg-icon.el-icon--xxx(v-if='menu.icon', :name='menu.icon')
     i.el-icon--xxx(v-else) {{ menu.name[0].toUpperCase() }}
-    span(slot='title') {{ menu.name }}
+    span(slot='title') {{ menu.title }}
 
   //- 单个子栏目
   menu-item(v-else-if='subMenus.length === 1', :menu='subMenus[0]')
@@ -13,7 +13,7 @@
     template(slot='title')
       svg-icon.el-icon--xxx(v-if='menu.icon', :name='menu.icon')
       i.el-icon--xxx(v-else) {{ menu.name[0].toUpperCase() }}
-      span(slot='title') {{ menu.name }}
+      span(slot='title') {{ menu.title }}
     menu-item(v-for='(subMenu, index) in subMenus', :menu='subMenu', :key='index')
 </template>
 
