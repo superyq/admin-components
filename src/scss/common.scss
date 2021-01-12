@@ -18,6 +18,18 @@
     font-size: 20px;
     color: #409eff;
   }
+  &_box {
+    width: 250px;
+    height: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    .demo-table {
+      width: calc(100% - 50px);
+      .demo-table_item {
+        border: 1px solid blue;
+      }
+    }
+  }
 }
 
 .page-coder {
@@ -70,4 +82,8 @@
     display: flex;
     align-items: center;
   }
+}
+
+.demo-table {
+
 }

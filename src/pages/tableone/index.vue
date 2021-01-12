@@ -4,12 +4,7 @@
       .page-look
         .page-look_title 视图
         .page-percent_box
-          c-percentage(
-            :width='`${width}%`',
-            :background="[colorStart, colorEnd]",
-            :haveBg="haveBg", 
-            :rem="rem"
-          )
+          table-wrapper-one(:widthArr='widthArr', :headerArr='headerArr', :datasArr='datasArr', :bottom='bottom', :option='option')
       .page-coder
         .page-coder_title 使用
         .page-coder_content {{ htmlData }}
@@ -19,55 +14,45 @@
       .page-control_content
         p 
           b 注意：
-          | 大小由外部盒子决定
+          | 大小由外部盒子决定,可以自定义每列的样式
 
         p 
-          b width: {{ width }}%，
-          | 进度条百分比, 0%-100%, 默认为50%
+          b widthArr: {{ widthArr }}，
+          | table列表的每列宽度
         .page-control_control
-          el-slider(v-model='width')
       
         p 
-          b background: [{{ colorStart }}, {{ colorEnd }}]，
-          | 进度条颜色左到右, 默认为["#002adb", "#04f7fb"]
-        .page-control_control.c-c
-          span 开始颜色：
-          <el-color-picker v-model="colorStart"></el-color-picker>
-          span ，结束颜色：
-          <el-color-picker v-model="colorEnd"></el-color-picker>
-        
-        p 
-          b haveBg: {{ haveBg }}，
-          | 是否显示黑色背景, true:是, false: 否, 默认为true
-        .page-control_control.c-c 
-          el-switch(
-            v-model="haveBg"
-            active-color="#13ce66"
-            inactive-color="#ff4949"
-          )
-
-        p 
-          b rem: {{ rem }}，
-          | 圆角是否使用rem单位, true:是, false: 否, 默认为false
+          b headerArr: {{ headerArr }}，
+          | table列表的表头标题
         .page-control_control
-          el-switch(
-            v-model="rem"
-            active-color="#13ce66"
-            inactive-color="#ff4949"
-          )
         
+        p 
+          b datasArr: {{ datasArr }}，
+          | 列表数据
+        .page-control_control
+        
+        p 
+          b bottom: {{ bottom }}，
+          | 每行距离下方距离
+        .page-control_control
+        
+        p 
+          b option: {{ option }}，
+          | 查看自动滚动组件配置项
+        .page-control_control
+
 </template>
 <script>
 export default {
   name: "yq-percentage",
   data() {
     return {
-      htmlData: `<c-percentage width='70%' :background='["#002adb", "#04f7fb"]' :haveBg='false' rem></c-percentage>`,
-      width: 50,
-      colorStart: "#002adb",
-      colorEnd: "#04f7fb",
-      haveBg: true,
-      rem: false
+      htmlData: `<table-wrapper-one :width='widthArr' :headerArr='headerArr' :datasArr='datasArr' bottom='0.2'></table-wrapper-one>`,
+      widthArr: [],
+      headerArr: [],
+      datasArr: [],
+      option: {},
+      bottom: '0.2'
     };
   },
 };

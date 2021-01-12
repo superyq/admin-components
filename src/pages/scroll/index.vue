@@ -3,8 +3,11 @@
     .page-header
       .page-look
         .page-look_title 视图
-        .page-scroll_box
+        .page-look_box
           c-scroll(@toBottom='toBottom', :rem='rem')
+            .demo-table
+              .demo-table_item(v-for='item in 20') {{ item }}
+                
 
       .page-coder
         .page-coder_title 使用
@@ -33,7 +36,9 @@ export default {
   name: "yq-scroll",
   data() {
     return {
-      htmlData: `<c-scroll @toBottom='toBottom' :rem='false'></c-scroll>`,
+      htmlData: `<c-scroll @toBottom='toBottom' :rem='false'>
+      <table></table>
+      </c-scroll>`,
       rem: false,
     };
   },
