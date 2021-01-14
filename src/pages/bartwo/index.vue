@@ -54,7 +54,7 @@ export default {
   name: "yq-bartwo",
   data() {
     return {
-      htmlData: `<bar-two-echarts cId="demo" :title="title" :xDatas="xDatas" :xName='xName' :rem='rem'></bar-two-echarts>`,
+      htmlData: `<bar-two-echarts cId="demo" :title="title" :rem='rem' :xDatas="xDatas" :xName='xName' ></bar-two-echarts>`,
       rem: false,
       xDatas: [
         {

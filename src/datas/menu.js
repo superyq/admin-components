@@ -11,6 +11,11 @@ export const menuList = [
     title: '柱状图样式1'
   },
   {
+    type: 1,
+    name: 'bartwo',
+    title: '柱状图样式2'
+  },
+  {
     type: 0,
     name: 'base',
     title: '基础组件',
