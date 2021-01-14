@@ -6,6 +6,11 @@ export const menuList = [
     title: '首页'
   },
   {
+    type: 1,
+    name: 'barone',
+    title: '柱状图样式1'
+  },
+  {
     type: 0,
     name: 'base',
     title: '基础组件',

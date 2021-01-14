@@ -3,7 +3,7 @@
     .page-header
       .page-look
         .page-look_title 视图
-        .page-percent_box
+        .page-look_box
           table-wrapper-one(:widthArr='widthArr', :headerArr='headerArr', :datasArr='datasArr', :bottom='bottom', :option='option')
       .page-coder
         .page-coder_title 使用
@@ -44,15 +44,15 @@
 </template>
 <script>
 export default {
-  name: "yq-percentage",
+  name: "yq-tableone",
   data() {
     return {
       htmlData: `<table-wrapper-one :width='widthArr' :headerArr='headerArr' :datasArr='datasArr' bottom='0.2'></table-wrapper-one>`,
       widthArr: [],
       headerArr: [],
-      datasArr: [],
+      datasArr: [{ name: "yq", sort: 1, width: "10", datas: [1, 2, 3] }],
       option: {},
-      bottom: '0.2'
+      bottom: "0.2",
     };
   },
 };

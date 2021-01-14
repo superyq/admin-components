@@ -3,13 +3,14 @@
     .page-header
       .page-look
         .page-look_title 视图
-        .page-percent_box
-          c-percentage(
-            :width='`${width}%`',
-            :background="[colorStart, colorEnd]",
-            :haveBg="haveBg", 
-            :rem="rem"
-          )
+        .page-look_box
+          auto-scroll(:tables='tables', :option='option')
+            .demo-table
+              .demo-table_item(v-for='item in tables')
+                .item-name {{ item.name }}
+                .item-age {{ item.age }}
+                .item-sex {{ item.sex }}
+                .item-love {{ item.love }}
       .page-coder
         .page-coder_title 使用
         .page-coder_content {{ htmlData }}
@@ -19,42 +20,18 @@
       .page-control_content
         p 
           b 注意：
-          | 大小由外部盒子决定
+          | 父级容器确定大小
 
         p 
-          b width: {{ width }}%，
-          | 进度条百分比, 0%-100%, 默认为50%
+          b tables: {{ tables }}，
+          | 滚动的tables列表
         .page-control_control
-          el-slider(v-model='width')
+          
       
         p 
-          b background: [{{ colorStart }}, {{ colorEnd }}]，
-          | 进度条颜色左到右, 默认为["#002adb", "#04f7fb"]
+          b option: {{ option }}，
+          | 滚动配置项, 可传可不传，默认配置如下
         .page-control_control.c-c
-          span 开始颜色：
-          <el-color-picker v-model="colorStart"></el-color-picker>
-          span ，结束颜色：
-          <el-color-picker v-model="colorEnd"></el-color-picker>
-        
-        p 
-          b haveBg: {{ haveBg }}，
-          | 是否显示黑色背景, true:是, false: 否, 默认为true
-        .page-control_control.c-c 
-          el-switch(
-            v-model="haveBg"
-            active-color="#13ce66"
-            inactive-color="#ff4949"
-          )
-
-        p 
-          b rem: {{ rem }}，
-          | 圆角是否使用rem单位, true:是, false: 否, 默认为false
-        .page-control_control
-          el-switch(
-            v-model="rem"
-            active-color="#13ce66"
-            inactive-color="#ff4949"
-          )
         
 </template>
 <script>
@@ -62,12 +39,17 @@ export default {
   name: "yq-percentage",
   data() {
     return {
-      htmlData: `<c-percentage width='70%' :background='["#002adb", "#04f7fb"]' :haveBg='false' rem></c-percentage>`,
-      width: 50,
-      colorStart: "#002adb",
-      colorEnd: "#04f7fb",
-      haveBg: true,
-      rem: false
+      htmlData: `<auto-scroll :tables='tables' :option="option">自定义列表</auto-scroll>`,
+      tables: [
+        { name: "yq", age: 18, sex: "man", love: "game" },
+        { name: "yq", age: 18, sex: "man", love: "game" },
+        { name: "yq", age: 18, sex: "man", love: "game" },
+        { name: "yq", age: 18, sex: "man", love: "game" },
+        { name: "yq", age: 18, sex: "man", love: "game" },
+        { name: "yq", age: 18, sex: "man", love: "game" },
+        { name: "yq", age: 18, sex: "man", love: "game" },
+      ],
+      option: {},
     };
   },
 };

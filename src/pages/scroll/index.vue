@@ -36,9 +36,7 @@ export default {
   name: "yq-scroll",
   data() {
     return {
-      htmlData: `<c-scroll @toBottom='toBottom' :rem='false'>
-      <table></table>
-      </c-scroll>`,
+      htmlData: `<c-scroll @toBottom='toBottom' :rem='false'>自定义列表</c-scroll>`,
       rem: false,
     };
   },

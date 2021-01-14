@@ -1331,10 +1331,10 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@yqcoder/components@1.0.17":
-  version "1.0.17"
-  resolved "https://registry.npm.taobao.org/@yqcoder/components/download/@yqcoder/components-1.0.17.tgz#accf1d30365f6651a0a87cc7a4834e84d8663fce"
-  integrity sha1-rM8dMDZfZlGgqHzHpINOhNhmP84=
+"@yqcoder/components@1.0.18":
+  version "1.0.18"
+  resolved "https://registry.npm.taobao.org/@yqcoder/components/download/@yqcoder/components-1.0.18.tgz#1b2d74440e636bbae7051916695456842dc17ddb"
+  integrity sha1-Gy10RA5ja7rnBRkWaVRWhC3Bfds=
   dependencies:
     core-js "^3.6.5"
     echarts "^4.9.0"
