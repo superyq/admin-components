@@ -5,6 +5,9 @@ function join(dir) {
 }
 
 module.exports = {
+  publicPath: './',
+  filenameHashing: false,
+  productionSourceMap: false,
   chainWebpack: config => {
     config.resolve.alias.set('@', join('src'));
 
