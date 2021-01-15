@@ -16,6 +16,41 @@ export const menuList = [
     title: '柱状图样式2'
   },
   {
+    type: 1,
+    name: 'lineone',
+    title: '线性图样式1'
+  },
+  {
+    type: 1,
+    name: 'morebar',
+    title: '柱状叠加图样式1'
+  },
+  {
+    type: 1,
+    name: 'pieone',
+    title: '饼状图样式1'
+  },
+  {
+    type: 1,
+    name: 'radarone',
+    title: '雷达图样式1'
+  },
+  {
+    type: 1,
+    name: 'ringone',
+    title: '圆环图样式1'
+  },
+  {
+    type: 1,
+    name: 'ringtwo',
+    title: '圆环图样式2'
+  },
+  {
+    type: 1,
+    name: 'ringonetable',
+    title: '圆环图列表样式1'
+  },
+  {
     type: 0,
     name: 'base',
     title: '基础组件',

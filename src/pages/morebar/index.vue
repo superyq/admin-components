@@ -24,24 +24,31 @@
           | 大小由外部盒子决定
 
         p 
-          b cId，
-          | echarts的Id，每个echarts组件id不同
-
-        p 
-          b xName: {{ xName }}，
-          | 标题
-        .page-control_control
-          
-      
-        p 
-          b lName: {{ lName }}，
-          | 柱状图数据，数据格式如例:value: 数值，cValue: 比年初
-        .page-control_control
+          b 1、cId：
+          | echarts的Id，每个echarts组件id不同，必传
         
         p 
-          b xDatas: {{ xDatas }}，
-          | 柱状图x轴命名, 数据格式如例子
+          b 2、rem: {{ rem }}：
+          | tooptip是否使用rem单位，false：否，true：是，默认为false
         .page-control_control
+          el-switch(
+            v-model="rem"
+            active-color="#13ce66"
+            inactive-color="#ff4949"
+          )
+      
+        p 
+          b 3、lName: {{ lName }}：
+          | 柱状图x轴命名, 数据格式如例子。
+
+        p 
+          b 4、xName: {{ xName }}：
+          | 柱状图x轴命名, 数据格式如例子。
+
+        p 
+          b 5、xDatas: {{ xDatas }}：
+          | 柱状图数据，数据格式如例。
+        
         
 </template>
 <script>
@@ -49,9 +56,9 @@ export default {
   name: "yq-morebar",
   data() {
     return {
-      htmlData: `<more-bar-echarts cId="demo" :xName='xName' :lName='lName' xDatas='xDatas' :rem='rem'></more-bar-echarts>`,
+      htmlData: `<more-bar-echarts cId="demo"  :rem='rem' :xName='xName' :lName='lName' xDatas='xDatas'></more-bar-echarts>`,
       rem: false,
-      xName: ["北京", "上海", "四川", "重庆"],
+      xName: ["北京", "上海", "四川", "重庆", "北京", "上海", "四川", "重庆"],
       lName: ["建行", "招商", "工行", "交通", "农行", "中国"],
       xDatas: [
         {
@@ -67,6 +74,10 @@ export default {
             color: "#3F06F8",
           },
           data: [
+            { value: 10, cValue: "-10%" },
+            { value: 15, cValue: "-10%" },
+            { value: 30, cValue: "-10%" },
+            { value: 20, cValue: "10%" },
             { value: 10, cValue: "-10%" },
             { value: 15, cValue: "-10%" },
             { value: 30, cValue: "-10%" },
@@ -90,6 +101,10 @@ export default {
             { value: 15, cValue: "-10%" },
             { value: 30, cValue: "-10%" },
             { value: 20, cValue: "10%" },
+            { value: 10, cValue: "-10%" },
+            { value: 15, cValue: "-10%" },
+            { value: 30, cValue: "-10%" },
+            { value: 20, cValue: "10%" },
           ],
         },
         {
@@ -105,6 +120,10 @@ export default {
             color: "#9E03FF",
           },
           data: [
+            { value: 10, cValue: "-10%" },
+            { value: 15, cValue: "-10%" },
+            { value: 30, cValue: "-10%" },
+            { value: 20, cValue: "10%" },
             { value: 10, cValue: "-10%" },
             { value: 15, cValue: "-10%" },
             { value: 30, cValue: "-10%" },
@@ -128,6 +147,10 @@ export default {
             { value: 15, cValue: "-10%" },
             { value: 30, cValue: "-10%" },
             { value: 20, cValue: "10%" },
+            { value: 10, cValue: "-10%" },
+            { value: 15, cValue: "-10%" },
+            { value: 30, cValue: "-10%" },
+            { value: 20, cValue: "10%" },
           ],
         },
         {
@@ -147,6 +170,10 @@ export default {
             { value: 15, cValue: "-10%" },
             { value: 30, cValue: "-10%" },
             { value: 20, cValue: "10%" },
+            { value: 10, cValue: "-10%" },
+            { value: 15, cValue: "-10%" },
+            { value: 30, cValue: "-10%" },
+            { value: 20, cValue: "10%" },
           ],
         },
         {
@@ -162,6 +189,10 @@ export default {
             color: "#E86452",
           },
           data: [
+            { value: 10, cValue: "-10%" },
+            { value: 15, cValue: "-10%" },
+            { value: 30, cValue: "-10%" },
+            { value: 20, cValue: "10%" },
             { value: 10, cValue: "-10%" },
             { value: 15, cValue: "-10%" },
             { value: 30, cValue: "-10%" },

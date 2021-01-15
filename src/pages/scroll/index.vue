@@ -21,7 +21,7 @@
           | 父级容器需设置宽高和overflow: hidden;子集盒子宽度需要设置 width: calc(100% - 0.5rem)或者 width: calc(100% - 50px)
       
         p 
-          b rem: {{ rem }}，
+          b 1、rem: {{ rem }}：
           | 圆角是否使用rem单位, true:是, false: 否, 默认为false
         .page-control_control
           el-switch(
@@ -29,6 +29,10 @@
             active-color="#13ce66"
             inactive-color="#ff4949"
           )
+        
+        p 
+          b 2、toBottom：
+          | 滚动触底函数
         
 </template>
 <script>

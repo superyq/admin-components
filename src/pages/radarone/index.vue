@@ -22,19 +22,17 @@
           | 大小由外部盒子决定
 
         p 
-          b cId，
-          | echarts的Id，每个echarts组件id不同
-
-        p 
-          b xName: {{ xName }}，
-          | 雷达图X轴
-        .page-control_control
-          
+          b 1、cId：
+          | echarts的Id，每个echarts组件id不同，必传
       
         p 
-          b xDatas: {{ xDatas }}，
-          | 雷达图数据
-        .page-control_control
+          b 2、xName: {{ xName }}：
+          | 柱状图x轴命名, 数据格式如例子。
+
+        p 
+          b 3、xDatas: {{ xDatas }}：
+          | 柱状图数据，数据格式如例。
+        
         
         
 </template>
@@ -43,7 +41,7 @@ export default {
   name: "yq-radarone",
   data() {
     return {
-      htmlData: `<radar-one-echarts cId="demo" :color='color' :xName='xName' :xDatas='xDatas'></radar-one-echarts>`,
+      htmlData: `<radar-one-echarts cId="demo" :xName='xName' :xDatas='xDatas'></radar-one-echarts>`,
       xName: [
         { name: "经营计划客户覆盖率", max: 50 },
         { name: "核心需求评估客户覆盖率", max: 50 },

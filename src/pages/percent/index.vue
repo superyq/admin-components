@@ -22,22 +22,22 @@
           | 大小由外部盒子决定
 
         p 
-          b width: {{ width }}%，
+          b 1、width: {{ width }}%：
           | 进度条百分比, 0%-100%, 默认为50%
         .page-control_control
           el-slider(v-model='width')
       
         p 
-          b background: [{{ colorStart }}, {{ colorEnd }}]，
+          b 2、background: [{{ colorStart }}, {{ colorEnd }}]：
           | 进度条颜色左到右, 默认为["#002adb", "#04f7fb"]
         .page-control_control.c-c
           span 开始颜色：
-          <el-color-picker v-model="colorStart"></el-color-picker>
+          el-color-picker(v-model="colorStart")
           span ，结束颜色：
-          <el-color-picker v-model="colorEnd"></el-color-picker>
+          el-color-picker(v-model="colorEnd")
         
         p 
-          b haveBg: {{ haveBg }}，
+          b 3、haveBg: {{ haveBg }}：
           | 是否显示黑色背景, true:是, false: 否, 默认为true
         .page-control_control.c-c 
           el-switch(
@@ -47,7 +47,7 @@
           )
 
         p 
-          b rem: {{ rem }}，
+          b 4、rem: {{ rem }}：
           | 圆角是否使用rem单位, true:是, false: 否, 默认为false
         .page-control_control
           el-switch(

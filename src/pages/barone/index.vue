@@ -49,58 +49,13 @@
           )
       
         p 
-          b 4、xDatas: {{ xDatas }}：
-          | 柱状图数据，数据格式如例:value: 数值，cValue: 比年初，默认：[{ value: 5, cValue: "10%" },{ value: 10, cValue: "10%" },{ value: 10, cValue: "10%" },{ value: 10, cValue: "10%" },{ value: 10, cValue: "10%" },{ value: 10, cValue: "-10%" }]
-        
+          b 4、xName: {{ xName }}：
+          | 柱状图x轴命名, 数据格式如例子。
+
         p 
-          b 5、xName: {{ xName }}：
-          | 柱状图x轴命名, 数据格式如例子，默认：["建行", "招行", "工行", "农行", "中行", "交行"]
-        .page-control_control
-          el-table(
-            :data="xDatas",
-            size='mini',
-            border,
-            width='150'
-          )
-            el-table-column(
-              prop="value",
-              label="名称",
-              width="180",
-
-            )
-              template(slot-scope="{ $index }")
-                el-input(
-                  placeholder="请输入内容",
-                  v-model="xName[$index]",
-                  maxlength='20',
-                  clearable
-                )
-
-            el-table-column(
-              prop="value"
-              label="数值"
-              width="180"
-            )
-              template(slot-scope="{ row }")
-                el-input(
-                  placeholder="请输入内容",
-                  v-model="row.value",
-                  type='number'
-                  maxlength='20',
-                  clearable
-                )
-            el-table-column(
-              prop="数值，cValue"
-              label="比年初"
-              width="180"
-            )
-              template(slot-scope="{ row }")
-                el-input(
-                  placeholder="请输入内容",
-                  v-model="row.cValue",
-                  maxlength='20',
-                  clearable
-                )
+          b 5、xDatas: {{ xDatas }}：
+          | 柱状图数据，数据格式如例。
+        
         
         
 </template>

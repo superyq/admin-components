@@ -17,7 +17,7 @@
           | 大小由外部盒子决定，外部盒子需设置 position: relative
 
         p 
-          b loading: {{ loading }}，
+          b 1、loading: {{ loading }}：
           | 判断是否显示加载中, true:显示, false:隐藏, 默认为false
         .page-control_control
           el-switch(
@@ -27,7 +27,7 @@
           )
 
         p 
-          b rem: {{ rem }}，
+          b 2、rem: {{ rem }}：
           | 加载圈是否使用rem单位, true:是, false: 否, 默认为false
         .page-control_control
           el-switch(

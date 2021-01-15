@@ -4,7 +4,15 @@
       .page-look
         .page-look_title 视图
         .page-look_box
-          table-wrapper-one(:widthArr='widthArr', :headerArr='headerArr', :datasArr='datasArr', :bottom='bottom', :option='option')
+          table-wrapper-one(
+            :rem='rem',
+            :widthArr='widthArr', 
+            :headerArr='headerArr', 
+            :datasArr='datasArr', 
+            :bottom='bottom', 
+            :option='option'
+          )
+
       .page-coder
         .page-coder_title 使用
         .page-coder_content {{ htmlData }}
@@ -48,8 +56,9 @@ export default {
   data() {
     return {
       htmlData: `<table-wrapper-one :width='widthArr' :headerArr='headerArr' :datasArr='datasArr' bottom='0.2'></table-wrapper-one>`,
-      widthArr: [],
-      headerArr: [],
+      rem: false,
+      widthArr: [2.8, 1.64, 1.5, 1.5, 1],
+      headerArr: ["私行占比排名", "私行占比", "系统占比", "期末（私行）", "期末（零售）"],
       datasArr: [{ name: "yq", sort: 1, width: "10", datas: [1, 2, 3] }],
       option: {},
       bottom: "0.2",

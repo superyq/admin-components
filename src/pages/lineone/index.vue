@@ -6,7 +6,7 @@
         .page-echarts_box
           line-one-echarts(
             cId="demo",
-            :color='color',
+            :color='[colorStart, colorEnd]',
             :xName='xName',
             :xDatas='xDatas'
           )
@@ -23,35 +23,37 @@
           | 大小由外部盒子决定
 
         p 
-          b cId，
-          | echarts的Id，每个echarts组件id不同
+          b 1、cId：
+          | echarts的Id，每个echarts组件id不同，必传
 
         p 
-          b color: {{ color }}，
-          | 线型图的下部颜色
-        .page-control_control
-          
+          b 2、color: [{{ colorStart }}, {{ colorEnd }}]：
+          | 线型图背景色, 默认为["#FF9F05", "rgba(255,159,5,0)"]
+        .page-control_control.c-c
+          span 开始颜色：
+          el-color-picker(v-model="colorStart")
+          span ，结束颜色：
+          el-color-picker(v-model="colorEnd")
       
         p 
-          b xDatas: {{ xDatas }}，
-          | 线性图数据
-        .page-control_control
-        
+          b 3、xName: {{ xName }}：
+          | 柱状图x轴命名, 数据格式如例子。
+
         p 
-          b xName: {{ xName }}，
-          | 线性图命名
-        .page-control_control
-        
+          b 4、xDatas: {{ xDatas }}：
+          | 柱状图数据，数据格式如例。
+                
 </template>
 <script>
 export default {
   name: "yq-lineone",
   data() {
     return {
-      htmlData: `<line-one-echarts cId="demo" :color='color' :xDatas="xDatas" :xName='xName'></line-one-echarts>`,
-      color: ["blue", "yellow"],
-      xName: ["1月", "2月"],
-      xDatas: [820, 932],
+      htmlData: `<line-one-echarts cId="demo" :color='color' :xName='xName' :xDatas="xDatas"></line-one-echarts>`,
+      colorStart: '#FF9F05',
+      colorEnd: 'rgba(255,159,5,0)',
+      xName: ["1月", "2月", "3月", "4月", "5月", "6月", "7月"],
+      xDatas: [820, 932, 901, 934, 1290, 1330, 1320],
     };
   },
 };

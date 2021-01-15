@@ -20,41 +20,44 @@
       .page-control_title 参数详解
       .page-control_content
         p 
-          b 注意：
-          | 大小由外部盒子决定
+          b 1、cId：
+          | echarts的Id，每个echarts组件id不同，必传
 
         p 
-          b cId，
-          | echarts的Id，每个echarts组件id不同
-
+          b 2、title: {{ title }}：
+          | 标题，默认：'全行合计占比'
+        .page-control_control.page-control_control-input
+          el-input(
+            placeholder="请输入内容",
+            v-model="title",
+            maxlength='20',
+            clearable
+          )
+        
         p 
-          b title: {{ title }}，
-          | 标题
+          b 3、rem: {{ rem }}：
+          | 标题和列表是否使用rem单位，false：否，true：是，默认为false
         .page-control_control
-          
+          el-switch(
+            v-model="rem"
+            active-color="#13ce66"
+            inactive-color="#ff4949"
+          )
       
         p 
-          b xDatas: {{ xDatas }}，
-          | 柱状图数据，数据格式如例:value: 数值，cValue: 比年初
-        .page-control_control
-        
+          b 4、xName: {{ xName }}：
+          | 柱状图x轴命名, 数据格式如例子。
+
         p 
-          b xName: {{ xName }}，
-          | 柱状图x轴命名, 数据格式如例子
-        .page-control_control
-        
-        p 
-          b rem: {{ rem }}，
-          | 判断是否使用rem单位
-        .page-control_control
-        
+          b 5、xDatas: {{ xDatas }}：
+          | 柱状图数据，数据格式如例。
 </template>
 <script>
 export default {
   name: "yq-pieone",
   data() {
     return {
-      htmlData: `<pie-one-echarts cId="demo" :title='title' :xName='xName' :xDatas='xDatas' :rem='rem'></-two-echarts>`,
+      htmlData: `<pie-one-echarts cId="demo" :title='title' :rem='rem' :xName='xName' :xDatas='xDatas'></-two-echarts>`,
       title: '标题',
       xName: ["建行", "招行", "工行", "农行", "中行", "交行"],
       xDatas: [

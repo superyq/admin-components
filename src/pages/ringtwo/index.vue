@@ -20,37 +20,16 @@
           | 大小由外部盒子决定
 
         p 
-          b cId，
-          | echarts的Id，每个echarts组件id不同
-
-        p 
-          b xDatas: {{ xDatas }}，
-          | 圆环图数据
-        .page-control_control
-          
-      
-        p 
-          b colorArr: {{ colorArr }}，
-          | 圆环图颜色
-        .page-control_control
-        
+          b 1、cId：
+          | echarts的Id，每个echarts组件id不同，必传        
         
 </template>
 <script>
 export default {
-  name: "yq-radarone",
+  name: "yq-ringtwo",
   data() {
     return {
-      htmlData: `<ring-one-echarts cId='demo' :colorArr='colors' :xDatas='datas'></ring-one-echarts>`,
-      xDatas: [
-        { name: "周一", number: 10 },
-        { name: "周一", number: 10 },
-        { name: "周一", number: 10 },
-        { name: "周一", number: 10 },
-        { name: "周一", number: 10 },
-        { name: "周一", number: 10 },
-      ],
-      colors: ["#3F06F8", "#5AD8A6", "#F6BD16", "#5b8ff9", "#E86452", "#9E03FF"]
+      htmlData: `<ring-two-echarts cId='demo'></ring-two-echarts>`,
     };
   },
 };

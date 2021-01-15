@@ -16,7 +16,7 @@
           | 大小由外部盒子决定，外部盒子需设置 position: relative
 
         p 
-          b text: {{ text }}，
+          b 1、text: {{ text }}：
           | 遮罩层的文字, 默认为"遮罩"
         .page-control_control
           el-input(
@@ -27,7 +27,7 @@
           )
 
         p 
-          b rem: {{ rem }}，
+          b 2、rem: {{ rem }}：
           | 文字是否使用rem单位, true:是, false: 否, 默认为false
         .page-control_control
           el-switch(
