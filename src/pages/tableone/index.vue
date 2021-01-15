@@ -57,9 +57,12 @@ export default {
     return {
       htmlData: `<table-wrapper-one :width='widthArr' :headerArr='headerArr' :datasArr='datasArr' bottom='0.2'></table-wrapper-one>`,
       rem: false,
-      widthArr: [2.8, 1.64, 1.5, 1.5, 1],
+      widthArr: [2, 1, 1, 1, 1],
       headerArr: ["私行占比排名", "私行占比", "系统占比", "期末（私行）", "期末（零售）"],
-      datasArr: [{ name: "yq", sort: 1, width: "10", datas: [1, 2, 3] }],
+      datasArr: [
+        { name: "yq", sort: 1, width: "70%", datas: [1, 2, 3, 100] },
+        { name: "yq", sort: 1, width: "70%", datas: [1, 2, 3, 100] },
+      ],
       option: {},
       bottom: "0.2",
     };

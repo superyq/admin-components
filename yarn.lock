@@ -1331,10 +1331,10 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@yqcoder/components@1.0.19":
-  version "1.0.19"
-  resolved "https://registry.npm.taobao.org/@yqcoder/components/download/@yqcoder/components-1.0.19.tgz?cache=0&sync_timestamp=1610618817758&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40yqcoder%2Fcomponents%2Fdownload%2F%40yqcoder%2Fcomponents-1.0.19.tgz#4e00769d98f9391a5c68e6c4e6b997e71aa6c1e2"
-  integrity sha1-TgB2nZj5ORpcaObE5rmX5xqmweI=
+"@yqcoder/components@1.0.21":
+  version "1.0.21"
+  resolved "https://registry.npm.taobao.org/@yqcoder/components/download/@yqcoder/components-1.0.21.tgz?cache=0&sync_timestamp=1610704084017&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40yqcoder%2Fcomponents%2Fdownload%2F%40yqcoder%2Fcomponents-1.0.21.tgz#3d5d11f91451af277ea3568d9671778703da1fa6"
+  integrity sha1-PV0R+RRRryd+o1aNlnF3hwPaH6Y=
   dependencies:
     core-js "^3.6.5"
     echarts "^4.9.0"

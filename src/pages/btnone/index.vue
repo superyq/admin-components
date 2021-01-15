@@ -30,14 +30,14 @@
           )
         
         p 
-          b title: {{ title }}：
+          b 2、title: {{ title }}：
           | 按钮名
         .page-control_control.page-control_control-input
           el-input(
             placeholder="请输入内容",
             size='mini',
             v-model="title",
-            maxlength='20',
+            maxlength='4',
             clearable
           )   
         

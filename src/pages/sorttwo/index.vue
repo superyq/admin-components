@@ -3,7 +3,7 @@
     .page-header
       .page-look
         .page-look_title 视图
-        .page-percent_box
+        .page-sort2_box
           sort-two(
             :rem="rem",
             :txt='txt',
@@ -38,19 +38,20 @@
             placeholder="请输入内容",
             size='mini',
             v-model="txt",
-            maxlength='20',
+            maxlength='4',
             clearable
           ) 
         
         p 
           b 3、sort: {{ sort }}：
-          | 标题名
+          | 排名
         .page-control_control.page-control_control-input
           el-input(
             placeholder="请输入内容",
             size='mini',
+            type='number',
             v-model="sort",
-            maxlength='20',
+            maxlength='3',
             clearable
           )
         

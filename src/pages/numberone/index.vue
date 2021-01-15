@@ -20,7 +20,7 @@
           | 大小由外部盒子决定
 
         p 
-          b rem: {{ rem }}：
+          b 1、rem: {{ rem }}：
           | 字体大小是否使用rem单位, true:是, false: 否, 默认为false
         .page-control_control
           el-switch(
@@ -30,7 +30,7 @@
           )
 
         p 
-          b number: {{ number }}：
+          b 2、number: {{ number }}：
           | 数字
         .page-control_control.page-control_control-input
           el-input(
@@ -45,7 +45,7 @@
 </template>
 <script>
 export default {
-  name: "yq-percentage",
+  name: "yq-numberone",
   data() {
     return {
       htmlData: `<number-one :rem='rem' :number='number'></number-one>`,
