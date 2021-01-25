@@ -36,7 +36,7 @@
         
         p 
           b 3、rem: {{ rem }}：
-          | 标题和列表是否使用rem单位，false：否，true：是，默认为false
+          | 标题和列表是否使用rem单位，false：否，true：是，默认为true
         .page-control_control
           el-switch(
             v-model="rem"

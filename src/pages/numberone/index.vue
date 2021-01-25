@@ -21,7 +21,7 @@
 
         p 
           b 1、rem: {{ rem }}：
-          | 字体大小是否使用rem单位, true:是, false: 否, 默认为false
+          | 字体大小是否使用rem单位, true:是, false: 否, 默认为true
         .page-control_control
           el-switch(
             v-model="rem"

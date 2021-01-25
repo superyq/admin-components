@@ -29,7 +29,7 @@
         
         p 
           b 2、rem: {{ rem }}：
-          | 整体布局是否使用rem单位，false：否，true：是，默认为false
+          | 整体布局是否使用rem单位，false：否，true：是，默认为true
         .page-control_control
           el-switch(
             v-model="rem"

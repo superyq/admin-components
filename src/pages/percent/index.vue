@@ -48,7 +48,7 @@
 
         p 
           b 4、rem: {{ rem }}：
-          | 圆角是否使用rem单位, true:是, false: 否, 默认为false
+          | 圆角是否使用rem单位, true:是, false: 否, 默认为true
         .page-control_control
           el-switch(
             v-model="rem"
